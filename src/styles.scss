@@ -1,0 +1,10 @@
+  @font-face {
+    font-family: "Inter";
+    src: url("./assets/Inter-VariableFont_slnt\,wght.ttf") format("opentype");
+  }
+  @import "../node_modules/angular-calendar/css/angular-calendar.css";
+
+body {
+ 
+    font-family: 'Inter', 'arial', sans-serif;
+}
