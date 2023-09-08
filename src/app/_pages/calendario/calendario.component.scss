@@ -1,0 +1,89 @@
+/* Estilos responsivos para el calendario */
+.calendar {
+    background-color: #ffffff;
+   ;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 100%; /* Evita que el calendario exceda el ancho de la pantalla */
+    overflow-x: auto; /* Agrega una barra de desplazamiento horizontal si es necesario */
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  h2 {
+    margin: 0;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .day-label {
+    text-align: center;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    padding: 5px;
+  }
+  .moht-days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+ }
+ 
+  .day {
+    height: 9rem;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .day:hover {
+    background-color: #f0f8ff;
+  }
+  
+  /* Estilos responsivos para la tabla */
+  @media (max-width: 768px) {
+    .days {
+      grid-template-columns: repeat(1, 1fr); /* Cambia a una sola columna en pantallas pequeñas */
+    }
+  }
+  .flotante {
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+    padding: 10px;
+    /* Agrega márgenes para separar el componente flotante del día clickeado */
+    margin-left: 10px; /* Puedes ajustar este valor según tus preferencias */
+    margin-top: 0; /* Puedes ajustar este valor según tus preferencias */
+    /* Añade una transición suave para una apariencia agradable */
+    transition: transform 0.3s ease;
+    transform: translateX(-100%); /* Oculta inicialmente el componente flotante */
+  }
+  
+  /* Estilo para el día clickeado */
+  .day-clicked {
+    background-color: #f0f8ff; /* Color de fondo cuando se hace clic en un día */
+    position: relative; /* Asegura que el componente flotante esté posicionado relativo a este elemento */
+  }
